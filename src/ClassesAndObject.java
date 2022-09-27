@@ -1,17 +1,29 @@
 public class ClassesAndObject {
     public static void main(String[] args) {
+        System.out.println();
         Person person1 = new Person();
         person1.name = "Роман";
         person1.age = 50;
-        System.out.println("Меня зовут " + person1.name + " и мне " + person1.age + " лет");
+        person1.sayHallo();
+        person1.speak();
+        System.out.println();
         Person person2 = new Person();
         person2.name = "Вова";
         person2.age = 20;
-        System.out.println("Меня зовут " + person2.name + " и мне " + person2.age + " лет");
+        person2.sayHallo();
+        person2.speak();
     }
 }
 
 class Person{
     String name;
     int age;
+
+    void speak() {
+        System.out.println("Меня зовут " + name + " и мне " + age + " лет");
+    }
+
+    void sayHallo(){
+        System.out.println("Привет!");
+    }
 }
