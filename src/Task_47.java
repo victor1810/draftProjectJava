@@ -4,23 +4,30 @@
 //1 -3,3 8 -9,9
 //8 7,8 -7,1 9
 
-import java.util.Scanner;
-
 public class Task_47 {
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-        System.out.println("Введите m: ");
-        int m = s.nextInt();
-        System.out.println("Введите n: ");
-        int n = s.nextInt();
+        int m = random(3, 10);
+        System.out.print("m = " + m + ", ");
+        int n = random(10, 3);
+        System.out.println("n = " + n + ": ");
         double[][] array = new double[m][n];
-        double max = 100;
 
-        for(int i = 0; i < array.length; i++){
-            for(int j = 0; j < array[i].length; j++){
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                array[i][j] = rnd(100.0);
                 System.out.print(array[i][j] + " ");
             }
             System.out.println();
         }
     }
+
+    public static double rnd(final double limit) {
+        return Math.random() * limit;
+    }
+
+    public static int random(int min, int max) {
+        max -= min;
+        return (int) (Math.random() * ++max) + min;
+    }
 }
+
