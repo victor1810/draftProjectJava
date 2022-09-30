@@ -34,9 +34,9 @@ class Person {
 
 
 
-    void setNameAndAge(String username, int userage) {
-        name = username;
-        age = userage;
+    void setNameAndAge(String name, int age) {
+        this.name = name;
+        this.age = age;
     }
 
     void speak() {

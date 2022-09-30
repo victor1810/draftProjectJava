@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Random random = new Random();
         var cube = new ArrayList<Integer>(List.of(0, 0, 0, 0, 0, 0));
-        Integer count = 2000000;
+        int count = 20;
 
         while(count > 0) {
             int position = random.nextInt(0, 6);
