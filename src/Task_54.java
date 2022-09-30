@@ -9,16 +9,19 @@
  9 5 3 2
  8 4 4 2  */
 
+import java.util.Random;
+
 public class Task_54 {
     public static void main(String[] args) {
-        int m = rnd(3, 9);
-        int n = rnd(3, 9);
+        Random random = new Random();
+        int m = random.nextInt(3, 9);
+        int n = random.nextInt(3, 9);
         int[][] array = new int[m][n];
         System.out.println("m = " + m + ", n = " + n + "\n");
         System.out.println("Несортированный массив");
         for(int i = 0; i < array.length; i++) {
             for(int j = 0; j < array[i].length; j++) {
-                array[i][j] = rnd(0, 999);
+                array[i][j] = random.nextInt(0, 999);
                 System.out.print(array[i][j] + " ");
             }
             System.out.println();
@@ -39,10 +42,5 @@ public class Task_54 {
             }
             System.out.println();
         }
-    }
-
-    public static int rnd(int min, int max) {
-        max -= min;
-        return (int) (Math.random() * ++max) + min;
     }
 }
