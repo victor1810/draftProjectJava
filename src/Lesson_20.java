@@ -1,11 +1,12 @@
 public class Lesson_20 {
     public static void main(String[] args) {
         Human h1 = new Human("Bob", 40);
-        h1.printNumberOfPeople();
-        Human h2 = new Human("Tom", 30);
-        h2.printNumberOfPeople();
-        Human h3 = new Human("Rob", 50);
-        h3.printNumberOfPeople();
+        System.out.println(h1);
+//        h1.printNumberOfPeople();
+//        Human h2 = new Human("Tom", 30);
+//        h2.printNumberOfPeople();
+//        Human h3 = new Human("Rob", 50);
+//        h3.printNumberOfPeople();
     }
 }
 
@@ -19,6 +20,10 @@ class Human {
         this.name = name;
         this.age = age;
         countPeople++;
+    }
+
+    public String toString() {
+        return name + ", " + age;
     }
 
     public void setName(String name) {
