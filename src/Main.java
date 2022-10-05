@@ -8,7 +8,7 @@ public class Main {
         var cube = new ArrayList<Integer>(List.of(0, 0, 0, 0, 0, 0));
         int count = 20;
 
-        while(count > 0) {
+        while (count > 0) {
             int position = random.nextInt(0, 6);
             Integer el = cube.get(position);
             cube.set(position, el + 1);

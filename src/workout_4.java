@@ -10,26 +10,28 @@ import java.util.Scanner;
 
 public class workout_4 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int a;
-        int b;
-        while (true) {
-            System.out.println("введите число ");
-            a = scanner.nextInt();
-            if (a < 0 || a > 10) {
-                System.out.println("введенные числа недопустимы");
+        try (Scanner scanner = new Scanner(System.in)) {
+            int a;
+            int b;
+            while (true) {
+                System.out.println("введите число ");
+                a = scanner.nextInt();
+                if (a < 0 || a > 10) {
+                    System.out.println("введенные числа недопустимы");
+                }
+                else {break;}
             }
-            else {break;}
-        }
 
-        while (true) {
-            System.out.println("введите число ");
-            b = scanner.nextInt();
-            if (b < 0 || b > 10) {
-                System.out.println("введенные числа недопустимы");
+            while (true) {
+                System.out.println("введите число ");
+                b = scanner.nextInt();
+                if (b < 0 || b > 10) {
+                    System.out.println("введенные числа недопустимы");
+                }
+                else {break;}
             }
-            else {break;}
+            System.out.println("answer -> " + (a * b));
         }
-        System.out.println("answer -> " + (a * b));
     }
 }
+
